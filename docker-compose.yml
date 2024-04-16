@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  my_node_app:
+    image: node:18-alpine
+    container_name: vedant_node_container2
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: ["node","main.js"]
+    ports: 
+      - '3000:3000'
